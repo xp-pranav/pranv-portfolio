@@ -1,0 +1,616 @@
+/**
+ * ===========================================
+ * PRANAV SHARMA - PORTFOLIO V4
+ * Skills Dashboard & Tech Stack Playground Styles
+ * ===========================================
+ */
+
+/* 
+ * Block: Skills Container Reset
+ * Purpose: Neutralizes inherited grid styles from style.css.
+ * What it does: Ensures #skills-container acts as a clean full-width block container for the dashboard layout.
+ */
+#skills-container.skills-grid {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* 
+ * Block: Two-Column Dashboard Layout
+ * Purpose: Defines the main desktop structure for the Skills section.
+ * What it does: Creates a balanced 2-column grid with comfortable 36px gap and generous right-side padding so widgets never stick to the screen edge.
+ */
+.skills-dashboard-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.28fr) minmax(0, 0.88fr);
+    gap: 36px;
+    align-items: start;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding-right: 32px; /* Generous breathing margin to prevent widgets from sticking to the right edge */
+}
+
+/* 
+ * Block: Left Column Wrapper
+ * Purpose: Contains and stacks the skill category cards.
+ * What it does: Uses flex column layout with consistent 20px vertical spacing between card groups.
+ */
+.skills-left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* 
+ * Block: Skills Category Grid
+ * Purpose: Organizes the 5 skill category cards into an intentional, balanced layout.
+ * What it does: Uses a 2-column grid where Programming leads across 2 columns, pairing Frontend/Tools and Video/Automation with 0 isolated cards.
+ */
+.skills-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* 
+ * Block: Skill Category Box
+ * Purpose: Styles each individual skill category container.
+ * What it does: Applies warm paper background, ink-black border, retro hard drop-shadow, and smooth hover elevation.
+ */
+.skill-category-box {
+    background: var(--warm-white);
+    border: var(--border-medium);
+    padding: 24px;
+    box-shadow: var(--shadow-retro);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-sizing: border-box;
+}
+
+/* 
+ * Block: Skill Category Box Hover State
+ * Purpose: Adds physical interactivity when hovering over category cards.
+ * What it does: Translates the card upward by 2px and deepens the shadow for a tactile paper feel.
+ */
+.skill-category-box:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* 
+ * Block: Active Category Highlight
+ * Purpose: Visually indicates which category is currently selected via pill click.
+ * What it does: Highlights the card with an acid-lime drop shadow and darkened border.
+ */
+.skill-category-box.active-category {
+    border-color: var(--ink-black);
+    box-shadow: 6px 6px 0 var(--acid-lime);
+}
+
+/* 
+ * Block: Lead Programming Card Placement
+ * Purpose: Positions the Programming card as the lead foundation.
+ * What it does: Spans both grid columns so its 4 pills layout horizontally with zero empty space.
+ */
+.skill-category-box[data-category-card="programming"] {
+    grid-column: span 2;
+}
+
+/* 
+ * Block: Balanced Two-Column Card Placements
+ * Purpose: Balances the remaining 4 skill categories in equal-width pairs.
+ * What it does: Places Frontend & Tools in row 2, and Video Editing & Automation in row 3 with flush outer edges.
+ */
+.skill-category-box[data-category-card="frontend"],
+.skill-category-box[data-category-card="tools"],
+.skill-category-box[data-category-card="video-editing"],
+.skill-category-box[data-category-card="automation"] {
+    grid-column: span 1;
+}
+
+/* 
+ * Block: Category Card Header
+ * Purpose: Formats the title and icon at the top of each category card.
+ * What it does: Aligns the category name with its icon and adds a subtle bottom divider.
+ */
+.skill-category-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: var(--border-thin);
+}
+
+/* 
+ * Block: Category Header Typography
+ * Purpose: Styles the uppercase category heading text.
+ * What it does: Sets Bebas/Grotesk condensed typography with high-contrast ink-black color.
+ */
+.skill-category-header h3 {
+    font-size: 1.18rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0;
+    color: var(--ink-black);
+}
+
+/* 
+ * Block: Category Icon Wrapper
+ * Purpose: Encloses the optional icon or text glyph in the category header.
+ * What it does: Centers the icon vertically and horizontally beside the card title.
+ */
+.skill-category-icon-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 
+ * Block: Text Category Icon
+ * Purpose: Formats monospace text glyphs (e.g. </>, 🎬, ⚡).
+ * What it does: Applies muted-grey monospace styling for clean retro aesthetics.
+ */
+.skill-category-icon-text {
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    color: var(--muted-grey);
+}
+
+/* 
+ * Block: Image Category Icon
+ * Purpose: Styles optional image or SVG icons configured for categories.
+ * What it does: Constrains icon size to 20x20px with proper aspect containment.
+ */
+.skill-category-icon-img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+/* 
+ * Block: Skill Pills Container
+ * Purpose: Wraps interactive skill pill buttons inside each category card.
+ * What it does: Enables natural flex wrapping with consistent 10px spacing between pills.
+ */
+.skill-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* 
+ * Block: Interactive Skill Pill Button
+ * Purpose: Tactile button representing an individual technology or skill.
+ * What it does: Displays skill name with monospace styling, paper background, thin border, and pointer cursor.
+ */
+.skill-pill {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    line-height: 1.35;
+    padding: 7px 11px;
+    background: var(--paper-surface);
+    border: var(--border-thin);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--charcoal);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+/* 
+ * Block: Skill Pill Hover State
+ * Purpose: Provides feedback when hovering over a skill pill.
+ * What it does: Inverts background to acid-lime with a crisp 2px retro drop shadow.
+ */
+.skill-pill:hover {
+    background: var(--acid-lime);
+    color: var(--ink-black);
+    border-color: var(--ink-black);
+    transform: translateY(-1px);
+    box-shadow: 2px 2px 0 var(--ink-black);
+}
+
+/* 
+ * Block: Selected Skill Pill State
+ * Purpose: Highlights the pill currently inspected in the terminal.
+ * What it does: Flips background to ink-black with glowing acid-lime text and border shadow.
+ */
+.skill-pill.selected {
+    background: var(--ink-black);
+    color: var(--acid-lime);
+    border-color: var(--ink-black);
+    box-shadow: 2px 2px 0 var(--acid-lime);
+}
+
+/* 
+ * Block: Skill Status Tag Base
+ * Purpose: Small uppercase status label inside each skill pill.
+ * What it does: Renders tiny bold text indicating proficiency or learning phase with border separation.
+ */
+.skill-status-tag {
+    font-size: 0.62rem;
+    font-weight: 700;
+    padding: 2px 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border: 1px solid rgba(20, 20, 18, 0.15);
+}
+
+/* 
+ * Block: Status Color Variations
+ * Purpose: Color-codes status tags according to learning stages.
+ * What it does: Applies acid-lime for learning, sky-blue for exploring, lavender for familiar, coral for proficient.
+ */
+.status-learning { background: var(--acid-lime); color: var(--ink-black); }
+.status-exploring { background: var(--sky-blue); color: var(--ink-black); }
+.status-familiar { background: var(--soft-lavender); color: var(--ink-black); }
+.status-proficient { background: var(--coral); color: white; }
+
+/* 
+ * Block: Right Column Layout
+ * Purpose: Houses the Tech Stack Playground widgets on desktop.
+ * What it does: Stacks Currently Exploring, Toolbox, and Terminal with 24px gaps, sticky positioning, comfortable 440px max-width, and padding-right to prevent sticking to the right edge.
+ */
+.skills-right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    position: sticky;
+    top: 90px;
+    max-width: 440px; /* Constrains widget width to maintain balance and avoid touching the right viewport boundary */
+    width: 100%;
+    box-sizing: border-box;
+    padding-right: 8px; /* Internal clearance so retro card shadows do not overflow or crowd the screen margin */
+}
+
+/* 
+ * Block: Reusable Playground Widget Card
+ * Purpose: Base container for Currently Exploring and Toolbox Selector.
+ * What it does: Provides warm white background, solid border, 24px padding, and retro drop shadow.
+ */
+.playground-box {
+    background: var(--warm-white);
+    border: var(--border-medium);
+    padding: 24px;
+    box-shadow: var(--shadow-retro);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* 
+ * Block: Playground Widget Header
+ * Purpose: Top title bar for playground cards.
+ * What it does: Separates widget title and instructional subtext with a bold bottom border.
+ */
+.playground-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: var(--border-medium);
+}
+
+/* 
+ * Block: Playground Widget Title
+ * Purpose: Monospace bold title with emoji indicator.
+ * What it does: Renders uppercase title with proper spacing and high contrast ink-black color.
+ */
+.playground-title {
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink-black);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* 
+ * Block: Currently Exploring List
+ * Purpose: Container for active learning focus items.
+ * What it does: Stacks 3 focus tracks with even 12px vertical gaps.
+ */
+.explore-pills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* 
+ * Block: Currently Exploring Item Row
+ * Purpose: Row displaying track title and current status.
+ * What it does: Uses flexbox justify-between on paper surface with thin border and clean padding.
+ */
+.explore-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    background: var(--paper-surface);
+    border: var(--border-thin);
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    color: var(--ink-black);
+}
+
+/* 
+ * Block: Currently Exploring Status Badge
+ * Purpose: Highlight badge for active focus areas.
+ * What it does: Applies bold acid-lime pill styling with black border and uppercase typography.
+ */
+.explore-status-tag {
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 3px 8px;
+    background: var(--acid-lime);
+    color: var(--ink-black);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border: 1px solid var(--ink-black);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 
+ * Block: Interactive Toolbox Chips Grid
+ * Purpose: Container for all interactive tech stack selector chips.
+ * What it does: Features content-driven height (no clipping), 8px by 10px gaps, and natural multi-row wrapping.
+ */
+.toolbox-selector-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 10px;
+    padding: 4px 0;
+    max-height: none; /* Content-driven height prevents bottom chip clipping */
+    overflow: visible;
+}
+
+/* 
+ * Block: Individual Toolbox Chip Button
+ * Purpose: Clickable technology tag inside the Interactive Toolbox.
+ * What it does: Formats monospace text with generous 6px 12px padding, natural line wrapping, and hover highlight.
+ */
+.toolbox-chip {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    line-height: 1.4;
+    padding: 6px 12px;
+    background: var(--light-grey);
+    border: var(--border-thin);
+    color: var(--charcoal);
+    cursor: pointer;
+    white-space: normal;
+    word-break: break-word;
+    transition: all var(--transition-fast);
+}
+
+/* 
+ * Block: Toolbox Chip Hover State
+ * Purpose: Interactive visual cue when hovering over a toolbox chip.
+ * What it does: Turns background acid-lime and lifts chip with a small black shadow.
+ */
+.toolbox-chip:hover {
+    background: var(--acid-lime);
+    color: var(--ink-black);
+    transform: translateY(-1px);
+    box-shadow: 2px 2px 0 var(--ink-black);
+}
+
+/* 
+ * Block: Selected Toolbox Chip State
+ * Purpose: Indicates which tool is actively displayed in the terminal.
+ * What it does: Sets solid black background with glowing acid-lime text and border shadow.
+ */
+.toolbox-chip.selected {
+    background: var(--ink-black);
+    color: var(--acid-lime);
+    border-color: var(--ink-black);
+    box-shadow: 2px 2px 0 var(--acid-lime);
+}
+
+/* 
+ * Block: Skill Terminal Panel Container
+ * Purpose: Live terminal window component on the right column.
+ * What it does: Features ink-black terminal background, retro drop shadow, and monospaced font family.
+ */
+.skill-terminal-panel {
+    background: var(--ink-black);
+    color: var(--warm-white);
+    border: var(--border-medium);
+    box-shadow: var(--shadow-retro);
+    font-family: var(--font-mono);
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* 
+ * Block: Skill Terminal Titlebar Header
+ * Purpose: Top window bar for the terminal emulator.
+ * What it does: Aligns macOS-style window dots, terminal title, and reset button with 12px vertical padding.
+ */
+.skill-terminal-header {
+    background: #22221f;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    border-bottom: 2px solid #333330;
+}
+
+/* 
+ * Block: Terminal Window Control Dots
+ * Purpose: Decorative window control dots mimicking desktop operating systems.
+ * What it does: Displays red, yellow, and green circular 10px dots.
+ */
+.skill-terminal-dots {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.skill-terminal-dots span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.skill-terminal-dots .dot-red { background: #ff5f56; }
+.skill-terminal-dots .dot-yellow { background: #ffbd2e; }
+.skill-terminal-dots .dot-green { background: #27c93f; }
+
+/* 
+ * Block: Skill Terminal Title Text
+ * Purpose: Monospace header title for the terminal window.
+ * What it does: Displays uppercase green title 'SKILL_TERMINAL.EXE' with letter spacing.
+ */
+.skill-terminal-title {
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--acid-lime);
+    flex-grow: 1;
+    margin-left: 6px;
+}
+
+/* 
+ * Block: Terminal Reset Button
+ * Purpose: Action button to clear selected inspection and reset terminal state.
+ * What it does: Renders accessible coral-colored button with hover color inversion.
+ */
+.term-reset-btn {
+    background: var(--coral);
+    color: white;
+    border: 1px solid white;
+    padding: 4px 10px;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all var(--transition-fast);
+}
+
+.term-reset-btn:hover {
+    background: white;
+    color: var(--coral);
+}
+
+/* 
+ * Block: Skill Terminal Output Body
+ * Purpose: Scrollable content area showing real-time tool specs and status.
+ * What it does: Provides generous 20px padding, readable 1.65 line-height, and internal scroll without clipping controls.
+ */
+.skill-terminal-body {
+    padding: 20px;
+    min-height: 130px;
+    max-height: 220px;
+    overflow-y: auto;
+    font-size: 0.88rem;
+    line-height: 1.65;
+}
+
+/* 
+ * Block: Terminal Output Title
+ * Purpose: Header line inside terminal output display.
+ * What it does: Displays neon acid-lime tool name and category spec in uppercase bold.
+ */
+.term-output-title {
+    color: var(--acid-lime);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.82rem;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* 
+ * Block: Terminal Output Description Text
+ * Purpose: Detail lines for proficiency level and workflow usage.
+ * What it does: Renders light-grey monospace text for high contrast against dark terminal background.
+ */
+.term-output-content {
+    color: var(--light-grey);
+}
+
+/* 
+ * Block: Responsive Tablet Breakpoint (<= 960px)
+ * Purpose: Adapts Skills section for tablet screens.
+ * What it does: Stacks the dashboard into a single column, releases sticky positioning, and maintains 2-column cards grid.
+ */
+@media (max-width: 960px) {
+    .skills-dashboard-layout {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding-right: 0;
+    }
+
+    .skills-right-column {
+        position: static;
+        top: auto;
+        max-width: 100%;
+    }
+
+    .skills-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+}
+
+/* 
+ * Block: Responsive Mobile Breakpoint (<= 640px)
+ * Purpose: Optimizes Skills section for mobile viewports.
+ * What it does: Stacks cards vertically in 1 column, adjusts inner padding, and prevents horizontal overflow.
+ */
+@media (max-width: 640px) {
+    .skills-dashboard-layout {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding-right: 0;
+    }
+
+    .skills-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .skill-category-box {
+        grid-column: span 1 !important;
+        padding: 20px;
+    }
+
+    .playground-box {
+        padding: 20px;
+    }
+
+    .toolbox-chip {
+        padding: 5px 10px;
+        font-size: 0.75rem;
+    }
+
+    .skill-terminal-body {
+        padding: 16px;
+        font-size: 0.82rem;
+    }
+}
