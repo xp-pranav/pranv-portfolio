@@ -5,3 +5,6 @@ Place photography, design explorations, behind-the-scenes desk shots, or artwork
 Recommended formats: .webp, .png, or .jpg
 Example:
   assets/images/gallery/desk-setup.webp
+
+  # Screenshot for portfolio hero banner
+portfolio-screenshot-2026.webp        

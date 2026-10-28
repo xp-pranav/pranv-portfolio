@@ -352,5 +352,3 @@ Then visit `http://localhost:8000`.
 
 - **[`list.md`](./list.md)** — **Master Technical Reference & Audit Log**: Comprehensive breakdown of design tokens, typography, CSS/JS module architecture, responsive breakpoint matrix (320px–1440px+), accessibility (a11y) checklist, and V4 upgrade changelog.
 - **[`customize.md`](./customize.md)** — **Complete A → Z Customization Manual**: Step-by-step instructions for editing every aspect of the portfolio (biography, skills, projects, experience, colors, typography, PRANAV.EXE terminal commands, and Bug Hunter mini-game settings).
-
-this is for me 

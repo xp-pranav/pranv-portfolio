@@ -87,7 +87,7 @@
         var domainLabels = {
             coding: 'Coding Project',
             video: 'Video Edit',
-            automation: 'Automation Flow'
+            automation: 'AI & Automation'
         };
 
         var icon = domainIcons[domain] || '●';
@@ -337,7 +337,7 @@
 
         var bannerText = (typeof videoData === 'object' && !Array.isArray(videoData) && videoData.bannerText)
             ? videoData.bannerText
-            : "I'm currently exploring video editing and motion design — focusing on pacing, cuts, and storytelling in Premiere Pro & DaVinci Resolve.";
+            : "I'm currently exploring video editing and motion design in DaVinci Resolve — focusing on narrative pacing, cuts, and cinematic color grading.";
         var projects = Array.isArray(videoData) ? videoData : (videoData.items || []);
 
         var html = '<div class="video-section-banner animate-on-scroll">' +
@@ -394,7 +394,7 @@
             html += '<div class="learning-callout-card animate-on-scroll">' +
                 '<div class="callout-badge">Learning in Progress</div>' +
                 '<h3 style="margin-bottom:var(--space-sm);">Practicing Cuts &amp; Color Grading</h3>' +
-                '<p style="color:var(--muted-grey);max-width:500px;margin:0 auto;line-height:1.6;">Check back soon for sample edits, montage practice, and short-form video experiments.</p>' +
+                '<p style="color:var(--muted-grey);max-width:500px;margin:0 auto;line-height:1.6;">Check back soon for sample edits, montage practice, and short-form video experiments in DaVinci Resolve.</p>' +
             '</div>';
         }
 
@@ -432,7 +432,7 @@
         var html = '<div class="automation-banner animate-on-scroll">' +
             '<div style="display:flex;align-items:center;gap:var(--space-md);margin-bottom:var(--space-sm);">' +
                 '<span class="editorial-stamp" style="border-color:var(--sky-blue);color:var(--sky-blue);">AI &amp; Workflows</span>' +
-                '<h3 style="margin:0;font-size:1.4rem;">Automation &amp; Scripts</h3>' +
+                '<h3 style="margin:0;font-size:1.4rem;">AI &amp; Automation</h3>' +
             '</div>' +
             '<p style="color:var(--charcoal);line-height:1.6;margin-bottom:var(--space-md);">' + bannerText + '</p>' +
             '<div class="workflow-node-diagram">' +
@@ -481,9 +481,9 @@
             html += '</div>';
         } else {
             html += '<div class="learning-callout-card animate-on-scroll" style="background:var(--warm-white);">' +
-                '<div class="callout-badge automation">Scripts in Development</div>' +
-                '<h3 style="margin-bottom:var(--space-sm);">Building Personal Tooling</h3>' +
-                '<p style="color:var(--muted-grey);max-width:500px;margin:0 auto;line-height:1.6;">Currently experimenting with workflow automations, API integrations, and developer productivity tools.</p>' +
+                '<div class="callout-badge automation">AI &amp; Automation in Development</div>' +
+                '<h3 style="margin-bottom:var(--space-sm);">Building Practical AI Tooling &amp; Workflows</h3>' +
+                '<p style="color:var(--muted-grey);max-width:500px;margin:0 auto;line-height:1.6;">Currently experimenting with LLM integrations, n8n automations, Python utilities, and developer productivity tools.</p>' +
             '</div>';
         }
 

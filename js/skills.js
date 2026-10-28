@@ -50,7 +50,8 @@
             'Frontend': '🎨',
             'Tools': '⚙',
             'Video Editing': '🎬',
-            'Automation': '⚡'
+            'Automation': '⚡',
+            'AI & Automation': '⚡'
         };
         var configuredCatData = data.skillCategories || {};
 

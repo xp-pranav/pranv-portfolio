@@ -21,8 +21,8 @@ window.portfolioData = {
      * What it does: Sets the browser document title, active portfolio edition tag, and toggles the custom cursor engine.
      */
     config: {
-        siteTitle: "Pranav Sharma — Developer & Creative Technologist",
-        edition: "2025 // V4.0",
+        siteTitle: "Pranav Sharma — Developer & AI Explorer",
+        edition: "2026 // V4.0",
         enableCustomCursor: true
     },
 
@@ -33,15 +33,15 @@ window.portfolioData = {
      */
     profile: {
         name: "Pranav Sharma",
-        role: "Developer & Creative Technologist",
-        tagline: "Building things that live on the web",
-        editionBadge: "EDITION 2025 // V4.0",
-        location: "India",
-        status: "Available for Projects & Collaborations",
-        introduction: "I build creative, high-performance web experiences and am actively expanding into video editing and automation workflows. Still learning, still building.",
-        // Path to your profile picture (e.g. assets/images/profile/profile.jpg, or leave empty to show the polaroid placeholder)
+        role: "Developer & AI Explorer",
+        tagline: "Building useful software, exploring AI, making tools open source.",
+        editionBadge: "EDITION 2026 // V4.0",
+        location: "Navi Mumbai, India",
+        status: "Open to Internships & Collaborations",
+        introduction: "I build useful web software, experiment with AI & LLMs, and practice video editing — passionate about creating free, open-source alternatives to expensive tools. Still learning, always building.",
+        // Path to your profile picture (assets/images/profile/profile.jpg)
         profileImage: "assets/images/profile/profile.jpg",
-        profileImageAlt: "Portrait of Pranav Sharma"
+        profileImageAlt: "Stylized neo-retro illustration representing Pranav Sharma"
     },
 
     /*
@@ -51,20 +51,20 @@ window.portfolioData = {
      */
     about: {
         headline: "Building things, learning always.",
-        description: "I'm a student and self-taught developer passionate about creating tactile, engaging web experiences. My journey started with pure curiosity about how the web works, which evolved into a focus on frontend architecture, creative interactions, and modern web standards. Today, I'm bridging traditional code with visual storytelling and workflow automation.",
-        philosophy: "I believe the most compelling digital experiences live at the intersection of robust engineering and thoughtful visual storytelling.",
+        description: "I'm a 1st-year B.Tech CSE (AI) student at ITM Skills University and self-taught developer. I build practical software to solve everyday problems and explore emerging AI technologies, with a strong focus on releasing free, open-source alternatives to expensive commercial tools so anyone can benefit without paywalls.",
+        philosophy: "Great technology shouldn't be locked behind expensive subscriptions. I build tools to scratch real itches, experiment with what AI can do, and share the code openly with the community.",
         interests: [
-            "Web Development",
-            "UI / UX Design",
-            "Creative Coding",
-            "Video Editing",
-            "AI Workflows",
-            "Open Source"
+            "Software Development",
+            "Artificial Intelligence",
+            "Open Source Software",
+            "LLM Applications",
+            "DaVinci Resolve",
+            "Creative Coding"
         ],
         learning: [
-            "Advanced JavaScript & Frontend Architecture",
-            "Video editing workflows & Premiere Pro / DaVinci Resolve",
-            "Python automation scripts & LLM integrations"
+            "AI APIs & practical LLM application architecture",
+            "Modern JavaScript & client-side software engineering",
+            "Visual storytelling & color grading in DaVinci Resolve"
         ]
     },
 
@@ -78,13 +78,13 @@ window.portfolioData = {
         "Frontend": { icon: "🎨", iconAlt: "Frontend design icon" },
         "Tools": { icon: "⚙", iconAlt: "Tools gear icon" },
         "Video Editing": { icon: "🎬", iconAlt: "Video editing clapperboard icon" },
-        "Automation": { icon: "⚡", iconAlt: "Automation lightning bolt icon" }
+        "AI & Automation": { icon: "⚡", iconAlt: "AI and Automation icon" }
     },
 
     /*
      * Block: Skills Inventory & Honest Proficiency Ratings
      * Purpose: Master list of technologies, tools, and workflows mapped to categories.
-     * What it does: Dynamically generates the 5 category cards, interactive toolbox chips, and terminal inspection data.
+     * What it does: Dynamically generates the category cards, interactive toolbox chips, and terminal inspection data.
      */
     skills: [
         { name: "JavaScript (ES6+)", category: "Programming", status: "Proficient" },
@@ -95,24 +95,22 @@ window.portfolioData = {
         { name: "Responsive Design", category: "Frontend", status: "Proficient" },
         { name: "DOM Manipulation", category: "Frontend", status: "Proficient" },
         { name: "CSS Grid & Flexbox", category: "Frontend", status: "Proficient" },
-        { name: "Tailwind CSS", category: "Frontend", status: "Exploring" },
 
         { name: "VS Code", category: "Tools", status: "Proficient" },
         { name: "Terminal / CLI", category: "Tools", status: "Working With" },
         { name: "Figma", category: "Tools", status: "Exploring" },
 
-        { name: "Premiere Pro", category: "Video Editing", status: "Learning" },
-        { name: "DaVinci Resolve", category: "Video Editing", status: "Exploring" },
-        { name: "Color Grading & Pacing", category: "Video Editing", status: "Learning" },
+        { name: "DaVinci Resolve", category: "Video Editing", status: "Learning" },
 
-        { name: "Python Automation", category: "Automation", status: "Exploring" },
-        { name: "API Integration", category: "Automation", status: "Working With" },
-        { name: "Prompt Engineering", category: "Automation", status: "Exploring" }
+        { name: "ChatGPT & Claude", category: "AI & Automation", status: "Exploring" },
+        { name: "OpenRouter", category: "AI & Automation", status: "Exploring" },
+        { name: "n8n Workflows", category: "AI & Automation", status: "Exploring" },
+        { name: "Prompt Engineering", category: "AI & Automation", status: "Exploring" }
     ],
 
     /*
      * Block: Projects Collection Across Creative Domains
-     * Purpose: Master portfolio showcase divided into Coding, Video Editing, and Automation tabs.
+     * Purpose: Master portfolio showcase divided into Coding, Video Editing, and AI & Automation tabs.
      * What it does: Renders interactive project cards, tags, links, and detailed modal deep dives.
      */
     projects: {
@@ -124,78 +122,53 @@ window.portfolioData = {
          */
         coding: [
             {
+                id: "better-qr",
+                title: "Better QR",
+                subtitle: "Feature-Rich QR Code Design Studio",
+                description: "A free, open-source QR studio featuring custom styling, bulk generation, batch printing, and multiple export options. Built as an affordable alternative to expensive paid generators.",
+                tags: ["JavaScript", "HTML5", "CSS3", "Open Source", "Vercel"],
+                github: "https://github.com/xp-pranav/Better-QR",
+                live: "https://better-qr-kappa.vercel.app/",
+                status: "Completed",
+                featured: true,
+                image: "assets/images/projects/coding/better-qr.png",
+                alt: "Better QR code design studio interface",
+                imagePlaceholder: "assets/images/projects/coding/better-qr.png",
+                details: {
+                    overview: "Better QR was built to eliminate the frustration of paid QR code generators holding basic features hostage behind subscriptions. It provides a full-featured, zero-cost, open-source suite directly in the browser.",
+                    challenge: "Integrating multi-type QR generation, visual styling controls, bulk batch workflows, and reliable export formats in pure client-side JavaScript without server overhead.",
+                    solution: "Architected a modular vanilla JS application managing SVG/canvas rendering, client-side ZIP packaging for bulk exports, and responsive CSS UI.",
+                    highlights: [
+                        "100% free and open-source under MIT license",
+                        "Multiple QR data formats (URL, WiFi, vCard, Text)",
+                        "Full aesthetic customization: colors, shapes, logos, frames",
+                        "Bulk generation and print-ready sheet exporting"
+                    ]
+                }
+            },
+            {
                 id: "portfolio-v4",
                 title: "Personal Portfolio V4",
                 subtitle: "Neo-Retro Scrapbook Portfolio System",
-                description: "An art-directed personal portfolio engineered with warm paper surfaces, asymmetrical bento layouts, an accessible project detail modal, adaptive custom cursor, and zero build tool dependencies.",
+                description: "An art-directed personal portfolio engineered with warm paper surfaces, asymmetrical bento layouts, an accessible project detail modal, adaptive custom cursor, and zero build tool dependencies. Free and open source.",
                 tags: ["HTML5", "CSS3", "Vanilla JS", "Design System", "A11y"],
-                github: "https://github.com/pranavsharma",
-                live: "https://github.com/xp-pranav",
+                github: "https://github.com/xp-pranav/portfolio-v4",
+                live: "https://xp-pranav.github.io/portfolio-v4",
                 status: "Completed",
                 featured: true,
-                image: "assets/images/projects/coding/portfolio-v4.webp",
+                image: "assets/images/projects/coding/portfolio-v4.png",
                 alt: "Preview of Portfolio V4 neo-retro scrapbook interface",
-                imagePlaceholder: "assets/images/projects/portfolio.jpg",
+                imagePlaceholder: "assets/images/projects/coding/portfolio-v4.png",
                 details: {
-                    overview: "Portfolio V4 represents an evolution in creative frontend craftsmanship. The goal was to build a distinctive digital identity combining mid-century editorial typography with tangible physical motifs (washi tape, polaroid frames, rubber stamps) while strictly adhering to pure web standards.",
-                    challenge: "Designing a rich, interactive scrapbook aesthetic without relying on heavy frameworks (React, Next.js) or bundlers (Vite, Webpack), while maintaining sub-second load times, flawless WCAG AAA/AA contrast, and 100% responsiveness from 320px to 4K displays.",
-                    solution: "Developed a lightweight component architecture in vanilla JavaScript powered by a single data store (`data.js`). Built an adaptive cursor engine that samples DOM layers to maintain contrast over dark sections, and engineered an accessible dialog modal system with keyboard trapping and scroll management.",
+                    overview: "Portfolio V4 combines tactile, physical scrapbooking aesthetics with modern web standards, featuring responsive bento grids, a playable Bug Hunter mini-game, and an interactive PRANAV.EXE terminal. Both live site and full source code are publicly accessible.",
+                    challenge: "Delivering rich tactile design and interactivity without heavy JS frameworks or bundlers, while maintaining sub-second load times, flawless WCAG contrast, and 100% responsiveness.",
+                    solution: "Developed a lightweight component architecture in vanilla JavaScript powered by a single data store (`data.js`). Built an adaptive cursor engine and an accessible dialog modal system.",
                     highlights: [
                         "100% pure HTML5/CSS3/Vanilla JS with zero external dependencies",
+                        "Open-source GitHub repository with full source code available",
                         "Dual-element adaptive custom cursor with real-time dark background detection",
                         "Accessible project detail modal with Escape-key handling and focus management",
-                        "Content-driven responsive breakpoints delivering zero horizontal scrollbar overflow",
-                        "Decoupled data architecture enabling one-file content customization"
-                    ]
-                }
-            },
-            {
-                id: "todo-habit-tracker",
-                title: "Interactive Todo & Habit Tracker",
-                subtitle: "Minimalist Productivity Application",
-                description: "A minimalist local-storage task manager featuring custom categories, streak counters, completion audio cues, and satisfying micro-interactions.",
-                tags: ["JavaScript", "LocalStorage", "CSS Grid", "Micro-interactions"],
-                github: "https://github.com/pranavsharma",
-                live: "",
-                status: "Completed",
-                featured: false,
-                image: "assets/images/projects/coding/todo-tracker.webp",
-                alt: "Preview of Interactive Todo and Habit Tracker application",
-                imagePlaceholder: "assets/images/projects/todo.jpg",
-                details: {
-                    overview: "A lightweight productivity tool built for keyboard-driven efficiency. Designed for daily task tracking, recurring habit monitoring, and streak visualizations without sending data to third-party cloud servers.",
-                    challenge: "Creating an instantaneous, tactile user experience with zero server latency while handling state persistence and schema migrations cleanly in browser LocalStorage.",
-                    solution: "Engineered an event-driven vanilla JS state manager that syncs tasks with LocalStorage on every mutation. Designed tactile retro checkbox controls and dynamic day streak calculation algorithms.",
-                    highlights: [
-                        "Zero-latency client-side persistence using LocalStorage",
-                        "Custom streak calculation algorithm for tracking daily habits",
-                        "Fluid drag-and-drop task prioritization and custom categories",
-                        "Satisfying CSS keyframe micro-interactions on task completion"
-                    ]
-                }
-            },
-            {
-                id: "weather-dashboard",
-                title: "Weather Dashboard App",
-                subtitle: "Dynamic Meteorological Interface",
-                description: "Clean weather forecasting web application utilizing open meteorological APIs with dynamic atmospheric backgrounds, UV indexing, and hourly forecast sliders.",
-                tags: ["API Integration", "Async JS", "CSS Variables", "Geolocation"],
-                github: "https://github.com/pranavsharma",
-                live: "",
-                status: "In Progress",
-                featured: false,
-                image: "assets/images/projects/coding/weather-dashboard.webp",
-                alt: "Preview of Weather Dashboard dynamic meteorological interface",
-                imagePlaceholder: "assets/images/projects/weather.jpg",
-                details: {
-                    overview: "An atmospheric dashboard that translates raw weather telemetry into clear, visual forecasts. Pulls real-time temperature, wind speed, humidity, and UV indexes from open meteorological services.",
-                    challenge: "Gracefully managing asynchronous network states, rate limits, geolocation permissions, and varying weather icon sets without visual flashes or layout shifts.",
-                    solution: "Implemented an async fetch pipeline with localStorage caching, defensive error boundaries for API downtime, and dynamic CSS variable theme shifting based on day/night and precipitation states.",
-                    highlights: [
-                        "Real-time geolocation lookup with graceful fallback to manual search",
-                        "Dynamic background hue shifting based on ambient weather and time of day",
-                        "5-day forecast visualization and hourly precipitation charts",
-                        "Defensive API caching to prevent rate-limit throttling"
+                        "Content-driven responsive breakpoints delivering zero horizontal scrollbar overflow"
                     ]
                 }
             }
@@ -204,105 +177,21 @@ window.portfolioData = {
         /*
          * Block: Video Editing & Motion Storytelling Showcase (Learning Track)
          * Purpose: Highlights video editing experiments, narrative pacing studies, and motion design practice.
-         * What it does: Renders informational callout banner and responsive video project cards with deep dive modals.
+         * What it does: Renders informational callout banner and honest learning progress state.
          */
         videoEditing: {
-            bannerText: "I'm currently exploring video editing and motion design — studying narrative pacing, rhythmic audio cuts, and cinematic color grading in Premiere Pro and DaVinci Resolve.",
-            items: [
-                {
-                    id: "cinematic-montage",
-                    title: "Cinematic Travel Montage",
-                    description: "Practice edit exploring speed ramping, rhythmic beat-matching audio cues, and warm film-look color grading.",
-                    image: "assets/images/projects/video-editing/travel-montage.webp",
-                    alt: "Preview frame from Cinematic Travel Montage video edit",
-                    tags: ["Premiere Pro", "Color Grading", "Sound Design"],
-                    status: "Still Learning",
-                    link: "",
-                    videoUrl: "",
-                    details: {
-                        overview: "A 60-second exercise in rhythmic editing and sensory sound design. Focused on pairing cut transitions precisely with drum transients and ambient soundscapes.",
-                        challenge: "Maintaining visual momentum while transitioning between radically different lighting environments without jarring the viewer.",
-                        solution: "Applied LUT balancing and manual color correction curves in Premiere Pro's Lumetri Color panel, layering whooshes, risers, and Foley audio to smooth every cut.",
-                        highlights: [
-                            "Precise audio transient cut points synchronized to percussion",
-                            "Color palette normalization across multiple camera sources",
-                            "Layered ambient audio soundscape with sub-bass swells"
-                        ]
-                    }
-                },
-                {
-                    id: "coding-vlog",
-                    title: "Coding Vlog / Dev Diary #1",
-                    description: "Short-form documentary style edit documenting a weekend coding sprint with animated typography and dynamic captions.",
-                    image: "assets/images/projects/video-editing/coding-vlog.webp",
-                    alt: "Preview frame from Coding Vlog and Dev Diary video edit",
-                    tags: ["DaVinci Resolve", "Subtitles", "Storytelling"],
-                    status: "Practice In Progress",
-                    link: "",
-                    videoUrl: "",
-                    details: {
-                        overview: "A behind-the-scenes dev diary capturing the rhythm of problem solving, debugging sessions, and breakthrough moments.",
-                        challenge: "Transforming static screen recordings and desk footage into an engaging, fast-paced educational story.",
-                        solution: "Used jump cuts to eliminate filler speech, added kinetic captions via DaVinci Resolve Text+, and integrated retro UI sound effects on key code highlights.",
-                        highlights: [
-                            "Kinetic word-by-word subtitle styling for retention",
-                            "Screen recording pan-and-crop transitions focusing on key code blocks",
-                            "Retro mechanical keyboard sound design accents"
-                        ]
-                    }
-                }
-            ]
+            bannerText: "I'm currently exploring video editing and motion design in DaVinci Resolve — studying narrative pacing, rhythmic audio cuts, and cinematic color grading. Published edits coming soon.",
+            items: []
         },
 
         /*
-         * Block: Automation, Python Scripts & AI Tooling (Workflow Showcase)
+         * Block: AI & Automation Tooling (Workflow Showcase)
          * Purpose: Documents workflow automation scripts, CLI utilities, and LLM integrations.
-         * What it does: Renders exploratory automation cards with technology tags and architectural deep dive modals.
+         * What it does: Renders exploratory automation banner and learning cards.
          */
         automation: {
-            bannerText: "Building utility scripts, web scrapers, and AI-powered workflow automations to streamline repetitive developer tasks and boost productivity.",
-            items: [
-                {
-                    id: "git-summary-cli",
-                    title: "Git Commit Auto-Summary CLI",
-                    description: "A lightweight Python utility script that analyzes staged git diffs and drafts structured, conventional commit messages.",
-                    image: "assets/images/projects/automation/git-summary-cli.webp",
-                    alt: "Preview diagram of Git Commit Auto-Summary CLI workflow",
-                    tags: ["Python", "Git API", "CLI", "LLM Workflows"],
-                    status: "Still Learning",
-                    github: "https://github.com/pranavsharma",
-                    details: {
-                        overview: "A developer CLI tool that automates the friction of writing detailed, structured git commit messages across multi-file diffs.",
-                        challenge: "Parsing raw diff chunks without exceeding API token limits while generating concise Conventional Commit compliant headers.",
-                        solution: "Constructed a Python script using `subprocess` and git plumbing commands (`git diff --staged`), filtering non-semantic whitespace and piping compressed diffs to local or remote LLM endpoints.",
-                        highlights: [
-                            "Adheres to the Conventional Commits specification (feat, fix, refactor)",
-                            "Diff token compression algorithm to minimize latency and token usage",
-                            "Interactive CLI prompt allowing instant confirmation or message edits"
-                        ]
-                    }
-                },
-                {
-                    id: "doc-link-validator",
-                    title: "Markdown Asset Link Validator",
-                    description: "Automation script that crawls local repository files, validates markdown image and link references, and reports broken paths.",
-                    image: "assets/images/projects/automation/doc-link-validator.webp",
-                    alt: "Preview diagram of Markdown Asset Link Validator workflow",
-                    tags: ["Python", "File System", "Automation", "CI Tooling"],
-                    status: "Working",
-                    github: "https://github.com/pranavsharma",
-                    details: {
-                        overview: "A zero-dependency Python script designed for local documentation maintenance and pre-commit verification.",
-                        challenge: "Accurately resolving relative paths, URI encoded filenames, and anchor tags across deep directory hierarchies.",
-                        solution: "Built a recursive AST-like regex scanner in Python that verifies each referenced file against the actual disk filesystem, outputting a colorized terminal report.",
-                        highlights: [
-                            "Zero external pip dependencies — runs on standard Python 3.8+",
-                            "Recursive directory scanning with ignore-pattern support (.git, node_modules)",
-                            "Clear CLI error reporting highlighting exact line numbers and broken paths"
-                        ]
-                    }
-                }
-            ]
+            bannerText: "Exploring practical AI applications, LLM workflows, and developer automations. I build utility scripts and experiment with tools like n8n, Python, and generative models to make daily workflows faster and smarter.",
+            items: []
         }
     },
 
@@ -313,24 +202,28 @@ window.portfolioData = {
      */
     experience: [
         {
-            title: "Self-Taught Web Developer",
-            organization: "Independent Projects & Creative Exploration",
-            date: "2023 — Present",
+            title: "B.Tech CSE (AI Specialization) — 1st Year",
+            organization: "ITM Skills University, Kharghar",
+            date: "2026 — Present",
             image: "",
             imageAlt: "",
-            description: "Diving deep into modern JavaScript (ES6+), responsive CSS architecture, semantic HTML5, Git version control, and building accessible web applications from first principles."
+            description: "Commenced formal engineering studies in Computer Science with a specialization in Artificial Intelligence. Focusing on foundational computing, algorithms, and applied AI systems alongside continuous independent project development."
         },
         {
-            title: "Exploring Creative Technologies",
-            organization: "Video Editing & Workflow Automation",
-            date: "2024 — Present",
-            description: "Expanding creative toolkit into rhythmic video editing, motion design in Premiere Pro & DaVinci Resolve, and authoring Python developer utility scripts."
+            title: "Data Fundamentals Certification",
+            organization: "IBM SkillsBuild",
+            date: "2025",
+            image: "",
+            imageAlt: "",
+            description: "Earned industry certification covering fundamental data literacy, data architectures, and foundational concepts supporting data-driven AI applications."
         },
         {
-            title: "Student & Technology Enthusiast",
-            organization: "Academic Studies",
-            date: "Ongoing",
-            description: "Balancing academic rigor with continuous hands-on project building, exploring the intersections of design, code, and user interaction."
+            title: "Self-Directed Developer & Builder",
+            organization: "Independent & Open-Source Projects",
+            date: "Independent Journey",
+            image: "",
+            imageAlt: "",
+            description: "Exploring programming and software design from first principles. Built and launched Better QR — a free, open-source QR studio — and continuously experimenting with AI tools, LLM workflows, and developer automations."
         }
     ],
 
@@ -344,36 +237,36 @@ window.portfolioData = {
             id: "01",
             title: "Coding & Development",
             status: "Primary Focus",
-            description: "Building art-directed web experiences, semantic frontend architecture, and clean vanilla JS components.",
+            description: "Building useful open-source tools, semantic frontend architecture, and clean vanilla JS components.",
             tagColor: "acid"
         },
         {
             id: "02",
-            title: "Video Editing",
-            status: "Still Learning",
-            description: "Studying narrative pacing, rhythmic audio cuts, and cinematic color grading in Premiere Pro and DaVinci Resolve.",
-            tagColor: "coral"
+            title: "AI & Automation",
+            status: "Active Exploration",
+            description: "Experimenting with n8n workflows, practical LLM integrations via OpenRouter, and Python utility scripts.",
+            tagColor: "sky"
         },
         {
             id: "03",
-            title: "Automation & AI",
+            title: "Video Editing",
             status: "Still Learning",
-            description: "Authoring Python utility scripts, CLI developer tooling, and exploring local LLM workflow integrations.",
-            tagColor: "sky"
+            description: "Studying narrative pacing, rhythmic audio cuts, and cinematic color grading in DaVinci Resolve.",
+            tagColor: "coral"
         }
     ],
 
     /*
      * Block: Social & Professional External Profiles
      * Purpose: External URL endpoints for GitHub, LinkedIn, Twitter, YouTube, and Email.
-     * What it does: Populates navigation links, contact section buttons, and footer social anchors.
+     * What it does: Populates navigation links, contact section buttons, and footer social anchors. Empty strings are automatically hidden.
      */
     socialLinks: {
         github: "https://github.com/xp-pranav",
-        linkedin: "https://linkedin.com",
-        twitter: "https://twitter.com",
-        youtube: "https://youtube.com",
-        email: "pranav@example.com"
+        linkedin: "https://www.linkedin.com/in/xp-pranav/",
+        twitter: "https://x.com/xp_pranav",
+        youtube: "",
+        email: "tbh.sharmapranav@gmail.com"
     },
 
     /*
@@ -383,6 +276,6 @@ window.portfolioData = {
      */
     footer: {
         creditText: "Handcrafted with curiosity & code ☕",
-        version: "Portfolio V4.0"
+        version: "Portfolio V4.0 // 2026"
     }
 };

@@ -47,7 +47,7 @@
                     '<div class="term-res-table">' +
                         '<div><span class="term-highlight">about</span>    — Developer background, status &amp; bio</div>' +
                         '<div><span class="term-highlight">skills</span>   — Technical toolkit with honest proficiencies</div>' +
-                        '<div><span class="term-highlight">projects</span> — Coding, Video &amp; Automation projects</div>' +
+                        '<div><span class="term-highlight">projects</span> — Coding, Video &amp; AI/Automation projects</div>' +
                         '<div><span class="term-highlight">journey</span>  — Milestones &amp; learning timeline</div>' +
                         '<div><span class="term-highlight">clear</span>    — Reset terminal console</div>' +
                     '</div>' +
@@ -65,7 +65,7 @@
                 return '<div class="term-res-block">' +
                     '<div class="term-res-heading">IDENTITY PROFILE:</div>' +
                     '<div><strong>Name:</strong> ' + (p.name || 'Pranav Sharma') + '</div>' +
-                    '<div><strong>Role:</strong> ' + (p.role || 'Developer & Creative Technologist') + '</div>' +
+                    '<div><strong>Role:</strong> ' + (p.role || 'Developer & AI Explorer') + '</div>' +
                     '<div><strong>Location:</strong> ' + (p.location || 'India') + '</div>' +
                     '<div><strong>Status:</strong> <span class="term-badge-acid">' + (p.status || 'Available') + '</span></div>' +
                     '<div style="margin-top:8px;line-height:1.6;color:var(--warm-white);font-style:italic;">&ldquo;' + intro + '&rdquo;</div>' +
@@ -126,7 +126,7 @@
 
                 // Sub-block: Automation Projects List
                 if (data.automation && data.automation.items) {
-                    html += '<div style="margin-top:6px;"><span class="term-highlight">[Automation &amp; AI Tools]</span></div>';
+                    html += '<div style="margin-top:6px;"><span class="term-highlight">[AI &amp; Automation]</span></div>';
                     data.automation.items.forEach(function (a) {
                         html += '<div style="padding-left:12px;">• <strong>' + a.title + '</strong> — ' + a.description + '</div>';
                     });
